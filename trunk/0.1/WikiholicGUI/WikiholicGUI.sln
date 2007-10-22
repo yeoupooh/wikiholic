@@ -1,9 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
+# SharpDevelop 2.2.1.2648
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiholicGUI", "WikiholicGUI\WikiholicGUI.csproj", "{099544D0-01C2-490D-BD6D-BFB954CE5B89}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBPGUI.Wikiholic", "RBPGUI.Wikiholic\RBPGUI.Wikiholic.csproj", "{F66C4584-DFB6-43B7-A1F8-60C9A5C5DAB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-﻿namespace RBPGUI.Wikiholic
+﻿namespace WikiholicGUI
 {
     partial class DockContentWikiholic
     {
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "DockContentWikiholic";
+        	this.SuspendLayout();
+        	// 
+        	// DockContentWikiholic
+        	// 
+        	this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+        	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        	this.ClientSize = new System.Drawing.Size(297, 189);
+        	this.Name = "DockContentWikiholic";
+        	this.TabText = "DockContentWikiholic";
+        	this.Text = "DockContentWikiholic";
+        	this.ResumeLayout(false);
         }
 
         #endregion
