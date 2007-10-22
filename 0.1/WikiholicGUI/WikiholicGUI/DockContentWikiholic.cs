@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 
-namespace RBPGUI.Wikiholic
+namespace WikiholicGUI
 {
     public partial class DockContentWikiholic : DockContent
     {
