@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiholicGUI", "WikiholicGUI\WikiholicGUI.csproj", "{099544D0-01C2-490D-BD6D-BFB954CE5B89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBPGUI.Wikiholic", "RBPGUI.Wikiholic\RBPGUI.Wikiholic.csproj", "{F66C4584-DFB6-43B7-A1F8-60C9A5C5DAB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{099544D0-01C2-490D-BD6D-BFB954CE5B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{099544D0-01C2-490D-BD6D-BFB954CE5B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{099544D0-01C2-490D-BD6D-BFB954CE5B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{099544D0-01C2-490D-BD6D-BFB954CE5B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66C4584-DFB6-43B7-A1F8-60C9A5C5DAB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66C4584-DFB6-43B7-A1F8-60C9A5C5DAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66C4584-DFB6-43B7-A1F8-60C9A5C5DAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66C4584-DFB6-43B7-A1F8-60C9A5C5DAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
