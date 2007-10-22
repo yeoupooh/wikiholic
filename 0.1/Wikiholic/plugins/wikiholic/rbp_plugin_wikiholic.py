@@ -5,10 +5,10 @@ from rbp.common.command import *
 import clr
 
 clr.AddReference('WeifenLuo.WinFormsUI.Docking')
-clr.AddReference('RBPGUI.Wikiholic')
+clr.AddReference('WikiholicGUI')
 
 from WeifenLuo.WinFormsUI.Docking import *
-from RBPGUI.Wikiholic import *
+from WikiholicGUI import *
 
 from rbp.plugin_base import *
 
@@ -35,6 +35,24 @@ class WikiholicCmd(ICommand):
 		dc = DockContentWikiholic()
 		dc.TabText = "Wikiholic"
 		dc.Show(self.form.dp, DockState.DockLeft)
+		
+		c = dc.btAddServer
+		c.Text = "Add Server"
+
+		c = dc.btEditServer
+		c.Text = "Edit Server"
+
+		c = dc.btRemoveServer
+		c.Text = "Remove Server"
+
+		c = dc.btAddWiki
+		c.Text = "Add Wiki"
+
+		c = dc.btEditWiki
+		c.Text = "Edit Wiki"
+
+		c = dc.btRemoveWiki
+		c.Text = "Remove Wiki"
 
 if __name__ == '__main__':
 	pass
