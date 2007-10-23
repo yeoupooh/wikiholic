@@ -17,7 +17,9 @@ class FormMain(Form):
 	deco = None
 	
 	def __init__(self):
+	
 		self.Text = "Wikiholic"
+		self.Icon = Icon("res\\wikipedia.ico")
 		
 		d = self.deco = FormDecorator(self)
 		d.decorate()

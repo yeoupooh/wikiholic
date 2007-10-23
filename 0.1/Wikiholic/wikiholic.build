@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="euc-kr"?>
 <project name="RBPApp" default="main">
 
-	<property name="name" value="demoapp"/>
+	<property name="name" value="wikiholic"/>
+	<property name="version" value="0.1.1"/>
 	
 	<target name="zip">
-		<zip zipfile="${name}.zip">
+		<zip zipfile="${name}-${version}.zip">
 			<fileset basedir=".">
 				<include name="**/*"/>
 				<exclude name=".svn"/>
