@@ -44,9 +44,9 @@
             // treeViewMain
             // 
             this.treeViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewMain.Location = new System.Drawing.Point(0, 0);
+            this.treeViewMain.Location = new System.Drawing.Point(0, 25);
             this.treeViewMain.Name = "treeViewMain";
-            this.treeViewMain.Size = new System.Drawing.Size(367, 437);
+            this.treeViewMain.Size = new System.Drawing.Size(367, 412);
             this.treeViewMain.TabIndex = 0;
             // 
             // toolStrip1
@@ -129,8 +129,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 437);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.treeViewMain);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "DockContentWikiholic";
             this.TabText = "DockContentWikiholic";
             this.Text = "DockContentWikiholic";
