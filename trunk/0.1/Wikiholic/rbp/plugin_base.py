@@ -1,6 +1,6 @@
-from rbp.common.pluginhost import *
-from rbp.common.singleton import *
-from rbp.common.command import *
+from common.pluginhost import *
+from common.singleton import *
+from common.command import *
 
 import clr
 
@@ -30,6 +30,7 @@ class BasePlugin:
 	def add_button(self, text, key, cmd):
 		c = ToolStripButton()
 		self.tc.Items.Add(c)
+		#self.set_button(c, text, key, cmd)
 
 		c.Text = text
 		c.Tag = key
