@@ -10,7 +10,7 @@ clr.AddReference('Wikiholic.Confluence')
 
 from WeifenLuo.WinFormsUI.Docking import *
 from WikiholicGUI import *
-from Wikiholic.Confluence.com.atlassian.confluence import *
+from Wikiholic.Confluence.com.atlassian.confluence import ConfluenceSoapServiceService
 
 from rbp.plugin_base import *
 
