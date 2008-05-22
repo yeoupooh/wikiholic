@@ -3,6 +3,9 @@
 
 = Integration =
 
+== XML-RPC ==
+  * [http://www.xml-rpc.net/ XMl-RPC.Net]
+
 == Trac ==
   * [http://trac-hacks.org/wiki/DotNet Accessing XmlRpcPlugin from C#]
   * [http://blog.bittercoder.com/CategoryView,category,trac.aspx Looking into Trac]
