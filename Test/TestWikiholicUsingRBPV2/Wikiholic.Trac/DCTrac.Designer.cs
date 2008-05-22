@@ -31,12 +31,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lstOutput = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPageContent = new System.Windows.Forms.TextBox();
+            this.textBoxUrl = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.checkBoxUseCredential = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(12, 88);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 23);
             this.button1.TabIndex = 0;
@@ -50,14 +54,14 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lstOutput.FormattingEnabled = true;
             this.lstOutput.ItemHeight = 12;
-            this.lstOutput.Location = new System.Drawing.Point(12, 41);
+            this.lstOutput.Location = new System.Drawing.Point(12, 117);
             this.lstOutput.Name = "lstOutput";
-            this.lstOutput.Size = new System.Drawing.Size(479, 88);
+            this.lstOutput.Size = new System.Drawing.Size(479, 112);
             this.lstOutput.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 135);
+            this.button2.Location = new System.Drawing.Point(12, 235);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 23);
             this.button2.TabIndex = 2;
@@ -65,23 +69,67 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // textBoxPageContent
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.textBoxPageContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 164);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(479, 142);
-            this.textBox1.TabIndex = 3;
+            this.textBoxPageContent.Location = new System.Drawing.Point(12, 264);
+            this.textBoxPageContent.Multiline = true;
+            this.textBoxPageContent.Name = "textBoxPageContent";
+            this.textBoxPageContent.Size = new System.Drawing.Size(479, 292);
+            this.textBoxPageContent.TabIndex = 3;
+            // 
+            // textBoxUrl
+            // 
+            this.textBoxUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUrl.Location = new System.Drawing.Point(12, 12);
+            this.textBoxUrl.Name = "textBoxUrl";
+            this.textBoxUrl.Size = new System.Drawing.Size(479, 21);
+            this.textBoxUrl.TabIndex = 4;
+            this.textBoxUrl.Text = "http://localhost:8080/projects/HelloTOW";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(12, 61);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(100, 21);
+            this.textBoxUsername.TabIndex = 5;
+            this.textBoxUsername.Text = "admin";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(121, 61);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(100, 21);
+            this.textBoxPassword.TabIndex = 6;
+            this.textBoxPassword.Text = "towadmin";
+            // 
+            // checkBoxUseCredential
+            // 
+            this.checkBoxUseCredential.AutoSize = true;
+            this.checkBoxUseCredential.Checked = true;
+            this.checkBoxUseCredential.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxUseCredential.Location = new System.Drawing.Point(12, 39);
+            this.checkBoxUseCredential.Name = "checkBoxUseCredential";
+            this.checkBoxUseCredential.Size = new System.Drawing.Size(105, 16);
+            this.checkBoxUseCredential.TabIndex = 7;
+            this.checkBoxUseCredential.Text = "Use credential";
+            this.checkBoxUseCredential.UseVisualStyleBackColor = true;
+            this.checkBoxUseCredential.CheckedChanged += new System.EventHandler(this.checkBoxUseCredential_CheckedChanged);
             // 
             // DCTrac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 318);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(503, 568);
+            this.Controls.Add(this.checkBoxUseCredential);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.textBoxUrl);
+            this.Controls.Add(this.textBoxPageContent);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lstOutput);
             this.Controls.Add(this.button1);
@@ -98,6 +146,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox lstOutput;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPageContent;
+        private System.Windows.Forms.TextBox textBoxUrl;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.CheckBox checkBoxUseCredential;
     }
 }

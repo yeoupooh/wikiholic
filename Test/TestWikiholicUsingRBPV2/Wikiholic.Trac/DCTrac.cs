@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Net;
 using System.Text;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using CookComputing.XmlRpc;
 using Wikiholic.Trac;
-using System.Net;
+using OpenCsHttp;
 
 namespace Wikiholic.Trac
 {
@@ -41,16 +42,36 @@ namespace Wikiholic.Trac
             }
             else
             {
-                textBox1.Text = text;
+                textBoxPageContent.Text = text;
             }
+        }
+
+        private void SetTrac(ITracXmlRpc trac)
+        {
+            trac.XmlEncoding = new UTF8Encoding();
+            trac.Url = textBoxUrl.Text + "/xmlrpc";
+            if (checkBoxUseCredential.Checked == true)
+            {
+                Login(trac.CookieContainer);
+                // 아래의 방법으로는 안됨.
+                //trac.PreAuthenticate = true;
+                //trac.Credentials = new NetworkCredential(textBoxUsername.Text, textBoxPassword.Text);
+            }
+            trac.Timeout = 20000;
+        }
+
+        private void Login(CookieContainer cc)
+        {
+            HttpGetter getter = new HttpGetter(textBoxUrl.Text + "/login", cc, new NetworkCredential(textBoxUsername.Text, textBoxPassword.Text));
+            getter.Get();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ITracXmlRpc trac = XmlRpcProxyGen.Create<ITracXmlRpc>();
-            trac.Timeout = 10000;
             try
             {
+                SetTrac(trac);
                 AsyncCallback acb = new AsyncCallback(GetAllPagesCallback);
                 //int num = Convert.ToInt32(txtStateNumber.Text);
                 TracAsyncState asyncState = new TracAsyncState(this);
@@ -75,6 +96,7 @@ namespace Wikiholic.Trac
         {
             XmlRpcAsyncResult clientResult = (XmlRpcAsyncResult)result;
             ITracXmlRpc trac = (ITracXmlRpc)clientResult.ClientProtocol;
+            //SetTrac(trac);
             TracAsyncState asyncState = (TracAsyncState)result.AsyncState;
             try
             {
@@ -134,9 +156,9 @@ namespace Wikiholic.Trac
                 string wikiPageName = lstOutput.SelectedItem as string;
 
                 ITracXmlRpc trac = XmlRpcProxyGen.Create<ITracXmlRpc>();
-                trac.Timeout = 10000;
                 try
                 {
+                    SetTrac(trac);
                     AsyncCallback acb = new AsyncCallback(GetPageCallback);
                     TracAsyncState asyncState = new TracAsyncState(this);
                     IAsyncResult asr = trac.BeginGetPage(wikiPageName, 0, acb, asyncState);
@@ -168,6 +190,12 @@ namespace Wikiholic.Trac
                 asyncState.theForm.Invoke(new AppendExceptionDelegate(
                   asyncState.theForm.AppendException), ex);
             }
+        }
+
+        private void checkBoxUseCredential_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxUsername.Enabled = checkBoxUseCredential.Checked;
+            textBoxPassword.Enabled = checkBoxUseCredential.Checked;
         }
 
     }
