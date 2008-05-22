@@ -18,6 +18,10 @@ namespace Wikiholic.Trac
         [XmlRpcEnd]
         string[] EndGetAllPages(IAsyncResult asr);
 
+
+
+
+
         [XmlRpcMethod("wiki.getPage")]
         string GetPage(string pageName, int version);
 
