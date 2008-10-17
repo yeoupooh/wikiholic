@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenCS.RBP</name>
+    </assembly>
+    <members>
+        <member name="T:OpenCS.RBP.IDockableContent">
+            <summary>
+            도킹가능한 컨텐트
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.IDockableContent.Show(WeifenLuo.WinFormsUI.Docking.DockPanel,WeifenLuo.WinFormsUI.Docking.DockState)">
+            <summary>
+            DockPanel에 표시한다.
+            </summary>
+            <param name="dockPanel">DockPanel</param>
+            <param name="dockState">DockState</param>
+        </member>
+        <member name="M:OpenCS.RBP.IDockableContent.Close">
+            <summary>
+            Close this DockContent.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IDockableContent.HideOnClose">
+            <summary>
+            Gets or Sets HideOnClose.
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.IRichBrowserControl">
+            <summary>
+            리치 브라우저 콘트롤
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.NewWebBrowser">
+            <summary>
+            웹 브라우저를 새로 연다.
+            </summary>
+            <returns>웹 브라우저 독컨텐트</returns>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.NewWebBrowser(System.String)">
+            <summary>
+            웹 브라우저를 새로 열고 해당 웹 주소로 접속한다.
+            </summary>
+            <param name="url">웹 주소</param>
+            <returns>웹 브라우저 독컨텐트</returns>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.Navigate(System.String)">
+            <summary>
+            웹 주소에 접속한다.
+            </summary>
+            <param name="url">웹 주소</param>
+            <returns>접속한 웹브라우저</returns>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.AddToolBarButton(System.String,OpenCS.Common.Action.IAction)">
+            <summary>
+            툴바 버튼을 추가한다.
+            </summary>
+            <param name="text">텍스트</param>
+            <param name="action">버튼이 눌렸을 때 처리할 액션</param>
+            <returns>생성된 툴바 버튼</returns>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.AddToolBarButton(System.Windows.Forms.ToolStripButton,OpenCS.Common.Action.IAction)">
+            <summary>
+            툴바 버튼을 추가한다.
+            </summary>
+            <param name="button">툴바 버튼 객체</param>
+            <param name="action">버튼이 눌렸을 때 처리할 액션</param>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.RemoveToolBarButton(System.Object)">
+            <summary>
+            툴바 버튼을 삭제한다.
+            </summary>
+            <param name="button">툴바 버튼 객체</param>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.AddMenuItem(System.String,OpenCS.Common.Action.IAction)">
+            <summary>
+            메뉴 아이템을 추가한다.
+            </summary>
+            <param name="text">텍스트</param>
+            <param name="action">메뉴를 클릭했을 때 처리할 액션</param>
+            <returns>생성된 메뉴 아이템 객체</returns>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.AddMenuItem(System.Windows.Forms.ToolStripMenuItem,OpenCS.Common.Action.IAction)">
+            <summary>
+            메뉴 아이템을 추가한다.
+            </summary>
+            <param name="item">메뉴 아이템 객체</param>
+            <param name="action">메뉴를 클릭했을 때 처리할 액션</param>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.RemoveMenuItem(System.Object)">
+            <summary>
+            메뉴 아이템을 삭제한다.
+            </summary>
+            <param name="menuItem">메뉴 아이템 객체</param>
+        </member>
+        <member name="M:OpenCS.RBP.IRichBrowserControl.LoadPlugins">
+            <summary>
+            현재 실행되고 있는 어플리케이션 폴더 밑의 Plugins 폴더로부터 플러그인을 읽어 온다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.Logger">
+            <summary>
+            로거를 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.DockPanel">
+            <summary>
+            DockPanel을 가져온다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.WebBrowserDockContentFactory">
+            <summary>
+            웹 브라우저 DockContent 공장을 설정한다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.ActiveWebBrowser">
+            <summary>
+            활성화되어 있는 웹 브라우저를 가져온다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.ShowMenuStrip">
+            <summary>
+            Gets or Sets MenuStrip visibility.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.ShowWebToolStrip">
+            <summary>
+            Gets or Sets WebToolStrip visibility.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.ShowAddressToolStrip">
+            <summary>
+            Gets or Sets AddressToolStrip visibility.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.ShowSearchToolStrip">
+            <summary>
+            Gets or Sets SearchToolStrip visibility.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRichBrowserControl.ShowStatusStrip">
+            <summary>
+            Gets or Sets StatusStrip visibility.
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.IRbpPlugin">
+            <summary>
+            리지 브라우저 플랫폼용 플러그인
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IRbpPlugin.RichBrowserControl">
+            <summary>
+            리치 브라우저 콘트롤을 설정한다.
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.BaseToggleableRbpPlugin">
+            <summary>
+            토글 가능한 패널 플러그인 기본 구현
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.BaseRbpPlugin">
+            <summary>
+            기본 구현한 리치 브라우저 플랫폼 플러그인
+            </summary>
+        </member>
+        <member name="F:OpenCS.RBP.BaseRbpPlugin.mRbc">
+            <summary>
+            리치 브라우저 콘트롤
+            </summary>
+        </member>
+        <member name="F:OpenCS.RBP.BaseRbpPlugin.mLogger">
+            <summary>
+            로거. 설정하지 않으면 <c>ConsoleLogger</c>가 기본으로 설정된다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.BaseRbpPlugin.Logger">
+            <summary>
+            로거를 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.BaseRbpPlugin.RichBrowserControl">
+            <summary>
+            리치 브라우저 콘트롤을 설정한다.
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.BaseToggleableRbpPlugin.InitToggleableResources(OpenCS.RBP.IToggleableDockContent,WeifenLuo.WinFormsUI.Docking.DockState)">
+            <summary>
+            토글 관련 리소스를 설정한다.
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.BaseToggleableRbpPlugin.InitToggleableResources(OpenCS.RBP.IToggleableDockContent,WeifenLuo.WinFormsUI.Docking.DockState,System.Drawing.Image)">
+            <summary>
+            토글 관련 리소스를 설정한다.
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.BaseToggleableRbpPlugin.DeinitToggleableResources">
+            <summary>
+            토글 관련 리소스를 해제한다.
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.BaseToggleableRbpPlugin.HandleShowAction(OpenCS.Common.Action.IAction)">
+            <summary>
+            <c>ShowAction</c>을 처리한다.
+            </summary>
+            <param name="action">액션</param>
+            <returns>성공하면 <c>ActionResult.Success</c></returns>
+        </member>
+        <member name="P:OpenCS.RBP.BaseToggleableRbpPlugin.ToggleableDockContent">
+            <summary>
+            도킹 패널을 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.BaseToggleableRbpPlugin.Button">
+            <summary>
+            버튼을 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.BaseToggleableRbpPlugin.MenuItem">
+            <summary>
+            메뉴아이템을 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.BaseToggleableRbpPlugin.ShowPosition">
+            <summary>
+            Gets or Sets ShowPosition
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.Actions.ShowAction">
+            <summary>
+            객체를 표시하라는 액션
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.Actions.ShowAction.#ctor(System.Object)">
+            <summary>
+            생성자
+            </summary>
+            <param name="showingObject">표시할 객체</param>
+        </member>
+        <member name="P:OpenCS.RBP.Actions.ShowAction.ShowingObject">
+            <summary>
+            표시할 객체를 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.Actions.NavigateAction">
+            <summary>
+            웹 주소(URL)를 이동하는 액션
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.Actions.IWebBrowserAction">
+            <summary>
+            웹 브라우저에서 처리가능한 액션
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.Actions.NavigateAction.#ctor(System.String)">
+            <summary>
+            생성자
+            </summary>
+            <param name="url">웹 주소</param>
+        </member>
+        <member name="P:OpenCS.RBP.Actions.NavigateAction.Url">
+            <summary>
+            웹 주소를 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.Actions.GoForwardAction">
+            <summary>
+            웹 브라우저의 히스토리에서 다음으로 이동하는 액션
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.NewWindowEventArgs">
+            <summary>
+            새창을 띄운다는 이벤트 인자
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.NewWindowEventArgs.#ctor(System.String)">
+            <summary>
+            생성자
+            </summary>
+            <param name="url">웹 주소</param>
+        </member>
+        <member name="P:OpenCS.RBP.NewWindowEventArgs.Url">
+            <summary>
+            웹 주소를 가져오거나 설정한다.
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.IWebBrowser">
+            <summary>
+            웹 브라우저
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.IWebBrowser.Show">
+            <summary>
+            표시한다.
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.IWebBrowser.Navigate(System.String)">
+            <summary>
+            웹 주소에 접속한다.
+            </summary>
+            <param name="url">웹 주소</param>
+        </member>
+        <member name="P:OpenCS.RBP.IWebBrowser.StatusText">
+            <summary>
+            상태바의 문자열을 가져온다.
+            </summary>
+        </member>
+        <member name="E:OpenCS.RBP.IWebBrowser.Navigated">
+            <summary>
+            WebBrowser의 Navigated 이벤트 핸들러
+            </summary>
+        </member>
+        <member name="E:OpenCS.RBP.IWebBrowser.DocumentCompleted">
+            <summary>
+            WebBrowser의 DocumentCompleted 이벤트 핸들러
+            </summary>
+        </member>
+        <member name="E:OpenCS.RBP.IWebBrowser.StatusTextChanged">
+            <summary>
+            WebBrowser의 StatusTextChanged 이벤트 핸들러
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.Actions.GoBackwardAction">
+            <summary>
+            웹 브라우저의 히스토리에서 이전으로 이동하는 액션
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.IPanelPlugin">
+            <summary>
+            패널형태의 플러그인
+            </summary>
+        </member>
+        <member name="M:OpenCS.RBP.IPanelPlugin.Show(WeifenLuo.WinFormsUI.Docking.DockPanel,WeifenLuo.WinFormsUI.Docking.DockState)">
+            <summary>
+            패널을 표시한다.
+            </summary>
+            <param name="dockPanel">DockPanel</param>
+            <param name="dockState">표시할 방법</param>
+        </member>
+        <member name="T:OpenCS.RBP.IWebBrowserDockContent">
+            <summary>
+            웹 브라우저를 내장한 DockContent
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IWebBrowserDockContent.WebBrowser">
+            <summary>
+            웹 브라우저를 가져온다.
+            </summary>
+        </member>
+        <member name="E:OpenCS.RBP.IWebBrowserDockContent.NewWindow">
+            <summary>
+            새 창을 띄우려고 할 때 발생한다. WebBrowser가 새창을 띄우지 않고, RBP가 다른 탭으로 띄우게 한다.
+            </summary>
+        </member>
+        <member name="T:OpenCS.RBP.IToggleableDockContent">
+            <summary>
+            Toggleable DockContent
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IToggleableDockContent.Plugin">
+            <summary>
+            Gets or Sets IPlugin.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IToggleableDockContent.RichBrowserControl">
+            <summary>
+            Gets or Sets IRichBrowserControl.
+            </summary>
+        </member>
+        <member name="P:OpenCS.RBP.IToggleableDockContent.ActionHandler">
+            <summary>
+            Gets or Sets IActionHandler.
+            </summary>
+        </member>
+    </members>
+</doc>
