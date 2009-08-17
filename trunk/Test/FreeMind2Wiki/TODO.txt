@@ -1,0 +1,5 @@
+FreeMind2Wiki
+- can read mm 0.8 format
+- write confluence wiki format
+- convert mm file to confluence wiki format
+- post converted wiki content to confluence server
