@@ -1,0 +1,1 @@
+The goal of Wikiholic is providing a Wiki frontend for ALL Wikis. First step is Confluence supporting and the next step is [Wiki RPC Interface 2](http://www.jspwiki.org/wiki/WikiRPCInterface2).
